@@ -8,7 +8,16 @@ export const startServer = () => {
   const app = express();
 
   // middlewares
-  app.use(cors());
+
+  app.use(
+    cors({
+      origin: "https://portafolio-six-tawny-94.vercel.app",
+      methods: ["POST"],
+      allowedHeaders: ["Content-Type"],
+      credentials: false,
+    })
+  );
+
   app.use(express.json());
   // Routes
 
