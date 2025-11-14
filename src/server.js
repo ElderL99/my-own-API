@@ -12,9 +12,9 @@ export const startServer = () => {
   app.use(express.json());
   // Routes
 
-  app.use("/api/contact", sendMessage);
+  app.use("/contact", sendMessage);
 
-  const PORT = process.env.PORT || 4000;
+  const PORT = process.env.PORT || 3000;
 
   // 🌐 GET
   app.get("/", (req, res) => {

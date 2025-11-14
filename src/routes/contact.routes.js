@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { sendMessage } from "../controllers/contact.controller.js";
+import { sendMessage } from "../controllers/contac.usecases.js";
 import { contactLimiter } from "../middlewares/rateLimiter.js";
 
 const router = Router();

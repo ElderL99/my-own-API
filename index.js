@@ -1,8 +1,7 @@
 import { connectDB } from "./src/lib/DB/bd.js";
 import { startServer } from "./src/server.js";
-import dotenv from "dotenv";
 
-dotenv.config();
+console.log("ENV LOADED, SENDGRID:", process.env.SENDGRID_API_KEY);
 
 const init = async () => {
   try {
