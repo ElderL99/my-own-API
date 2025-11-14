@@ -1,8 +1,6 @@
 import { connectDB } from "./src/lib/DB/bd.js";
 import { startServer } from "./src/server.js";
 
-console.log("ENV LOADED, SENDGRID:", process.env.SENDGRID_API_KEY);
-
 const init = async () => {
   try {
     // Conexión a MongoDB Atlas

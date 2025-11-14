@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+const PORT = process.env.PORT || 3000;
 
 // Routes
 import { sendMessage } from "./controllers/contac.usecases.js";
@@ -11,7 +12,7 @@ export const startServer = () => {
 
   app.use(
     cors({
-      origin: "https://portafolio-six-tawny-94.vercel.app",
+      origin: ["https://portafolio-six-tawny-94.vercel.app"],
       methods: ["POST"],
       allowedHeaders: ["Content-Type"],
       credentials: false,
@@ -22,8 +23,6 @@ export const startServer = () => {
   // Routes
 
   app.use("/contact", sendMessage);
-
-  const PORT = process.env.PORT || 3000;
 
   // 🌐 GET
   app.get("/", (req, res) => {
